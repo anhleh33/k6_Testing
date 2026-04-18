@@ -33,7 +33,13 @@ k6 version
 ```
 k6 run first-test.js
 ```
+It will run with single virtual user, single duration, single iteration
 
+To run with specific quanity:
+```
+k6 run scripts/first_k6_script.js --vus 3 --duration 5s
+```
+With 3 virtual users and duration of 5s
 ## 📊 Srcipt to get a summary report
 Copy and paste this one
 ```
