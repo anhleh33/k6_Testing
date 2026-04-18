@@ -7,8 +7,14 @@ const BASE_URL = __ENV.BASE_URL || 'https://test.k6.io'
 export const options = {
     stages: [
         {duration: '10s', target: 5}, 
-        {duration: '20s', target: 5}, 
-        {duration: '10s', target: 0},
+        {duration: '20s', target: 10}, 
+        {duration: '10s', target: 7},
+        {duration: '15s', target: 16},
+        {duration: '10s', target: 30},
+        {duration: '15s', target: 25},
+        {duration: '15s', target: 20},
+        {duration: '10s', target: 10},
+        {duration: '5s', target: 0},
     ],
     thresholds: {
         http_req_duration: ['p(95)<500'],
@@ -46,6 +52,6 @@ export default function () {
 
 export function handleSummary(data) {
     return {
-        "reports/report_user_journey.html": htmlReport(data),
+        "reports/report_user_journey_vu30.html": htmlReport(data),
     }
 }
