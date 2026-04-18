@@ -18,6 +18,7 @@ export const options = {
     ],
     thresholds: {
         http_req_duration: ['p(95)<500'],
+        check: ['rate>0.95']
     }
 };
 
@@ -29,7 +30,7 @@ export default function () {
             'home page status is 200': (r) => r.status === 200
         })
     })
-    sleep(2)
+    sleep(Math.random() * 2 + 1);
 
     group('Open News Page', () => {
         const res = http.get(`${BASE_URL}/news.php`)
@@ -38,7 +39,7 @@ export default function () {
             'news page status is 200': (r) => r.status === 200
         })
     })
-    sleep(2)
+    sleep(Math.random() * 2 + 1);
 
     group('Open Blogs Page',() => {
         const res = http.get(`${BASE_URL}/blog`)
@@ -47,7 +48,7 @@ export default function () {
             'blog loaded is 200': (r) => r.status === 200
         })
     })
-    sleep(2)
+    sleep(Math.random() * 2 + 1);
 }
 
 export function handleSummary(data) {
