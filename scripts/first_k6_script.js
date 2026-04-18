@@ -22,6 +22,6 @@ export default function () {       // The main scenario for every virtual user t
 
 export function handleSummary(data) {
     return {
-        "report_30vus_5d.html": htmlReport(data),
+        "reports/report_30vus_5d.html": htmlReport(data),
     }
 }
