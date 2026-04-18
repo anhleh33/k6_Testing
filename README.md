@@ -40,7 +40,7 @@ To run with specific quanity:
 k6 run scripts/first_k6_script.js --vus 3 --duration 5s
 ```
 With 3 virtual users and duration of 5s
-## 📊 Srcipt to get a summary report
+## 📊 Script to get a summary report
 Copy and paste this one
 ```
 import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js"
